@@ -13,77 +13,109 @@
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#f4f6fb;
+  background:#eef2ff;
   color:#1f2937;
 }
-section{padding:90px 20px}
-.container{max-width:1100px;margin:auto}
+section{padding:100px 20px}
+.container{max-width:1150px;margin:auto}
+.center{text-align:center}
+
+/* HERO */
 .hero{
-  background:linear-gradient(135deg,#4f46e5,#3b82f6);
+  background:linear-gradient(135deg,#4f46e5,#2563eb);
   color:white;
+  overflow:hidden;
 }
 .hero-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:40px;
+  gap:50px;
 }
-.hero h1{font-size:42px;margin-bottom:10px}
+.hero h1{font-size:48px;line-height:1.2}
 .hero p{font-size:18px;opacity:.95}
 .badge{
-  display:inline-block;
   background:rgba(255,255,255,.2);
-  padding:6px 14px;
-  border-radius:20px;
+  padding:8px 18px;
+  border-radius:30px;
+  display:inline-block;
+  margin-bottom:20px;
   font-size:14px;
-  margin-bottom:15px;
 }
 .btn{
   display:inline-block;
-  margin-top:25px;
-  padding:15px 34px;
+  padding:16px 36px;
   background:white;
   color:#4f46e5;
   border-radius:50px;
   font-weight:600;
   text-decoration:none;
+  margin-top:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
   transition:.3s;
 }
-.btn:hover{transform:translateY(-4px)}
+.btn:hover{transform:translateY(-6px)}
 .hero img{
   width:100%;
-  max-width:420px;
+  max-width:440px;
   animation:float 3s ease-in-out infinite;
 }
+
+/* FLOAT */
 @keyframes float{
   0%{transform:translateY(0)}
-  50%{transform:translateY(-15px)}
+  50%{transform:translateY(-18px)}
   100%{transform:translateY(0)}
 }
+
+/* GLASS CARD */
+.glass{
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(14px);
+  border-radius:26px;
+  padding:35px;
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+  transition:.3s;
+}
+.glass:hover{transform:translateY(-10px)}
+
+/* FEATURES */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.card{
-  background:white;
-  padding:30px;
-  border-radius:22px;
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-  text-align:center;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:30px;
 }
 .card i{
-  font-size:32px;
+  font-size:36px;
   color:#4f46e5;
-  margin-bottom:15px;
+  margin-bottom:18px;
 }
-.alt{background:#eef2ff}
-.center{text-align:center}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+.stat{
+  background:linear-gradient(135deg,#6366f1,#3b82f6);
+  color:white;
+  padding:45px 30px;
+  border-radius:28px;
+  box-shadow:0 30px 60px rgba(0,0,0,.25);
+}
+.stat h2{font-size:42px;margin:0}
+
+/* TAGLINE */
+.tagline h2{font-size:38px}
+.tagline span{color:#4f46e5;font-weight:700}
+
+/* FOOTER */
 .footer{
-  background:#111827;
+  background:#0f172a;
   color:white;
   text-align:center;
-  padding:40px 20px;
+  padding:50px 20px;
 }
 </style>
 </head>
@@ -95,53 +127,49 @@ section{padding:90px 20px}
   <div class="container hero-grid">
     <div>
       <div class="badge">🔥 100% Online • Bersertifikat BNSP</div>
-      <h1>Magang Mandiri Digital Marketing</h1>
+      <h1>Magang Mandiri<br>Digital Marketing</h1>
       <p>Tingkatkan skill dan pengalaman kerja digital marketing secara online (WFH)</p>
       <a class="btn" href="https://www.satukelas.id/learning-path/16">Daftar Sekarang</a>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712100.png">
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section>
-  <div class="container center">
+  <div class="container center glass">
     <h2>Tentang Satukelas.id</h2>
-    <p>Platform pembelajaran digital yang menyediakan program magang mandiri berbasis praktik untuk mahasiswa dan fresh graduate.</p>
+    <p>Platform edukasi digital yang menyediakan magang mandiri, sertifikasi, dan pembelajaran berbasis praktik industri.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section class="alt">
-  <div class="container">
-    <div class="cards">
-      <div class="card"><i class="fa-solid fa-video"></i><h3>100+ Video</h3><p>Pembelajaran interaktif</p></div>
-      <div class="card"><i class="fa-solid fa-clock"></i><h3>Self Learning</h3><p>Belajar fleksibel</p></div>
-      <div class="card"><i class="fa-solid fa-briefcase"></i><h3>Magang Mandiri</h3><p>Real project</p></div>
-      <div class="card"><i class="fa-solid fa-certificate"></i><h3>Sertifikasi</h3><p>BNSP kredibel</p></div>
-    </div>
+<section>
+  <div class="container cards">
+    <div class="glass card center"><i class="fa-solid fa-video"></i><h3>Video Interaktif</h3><p>Materi mudah dipahami</p></div>
+    <div class="glass card center"><i class="fa-solid fa-briefcase"></i><h3>Magang Mandiri</h3><p>Real project industri</p></div>
+    <div class="glass card center"><i class="fa-solid fa-certificate"></i><h3>Sertifikasi BNSP</h3><p>Legal & kredibel</p></div>
+    <div class="glass card center"><i class="fa-solid fa-user-graduate"></i><h3>Mentor</h3><p>Pendamping profesional</p></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section>
+  <div class="container stats center">
+    <div class="stat"><h2>10K+</h2><p>Peserta</p></div>
+    <div class="stat"><h2>100+</h2><p>Video</p></div>
+    <div class="stat"><h2>WFH</h2><p>100% Online</p></div>
+    <div class="stat"><h2>BNSP</h2><p>Sertifikat</p></div>
   </div>
 </section>
 
 <!-- TAGLINE -->
-<section>
-  <div class="container center">
-    <h2>LULUS LANGSUNG JADI DIGITAL MARKETER?</h2>
-    <h3 style="color:#4f46e5">#BISABANGET</h3>
-    <p>Program Magang Mandiri Digital Marketing bersertifikat BNSP.</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="alt">
-  <div class="container center">
-    <a class="btn" href="https://wa.me/6281234567890">Konsultasi via WhatsApp</a>
-    <p style="margin-top:20px">
-      Instagram • Facebook • Satukelas.id
-    </p>
-  </div>
+<section class="tagline center">
+  <h2>Lulus Langsung Jadi <span>Digital Marketer?</span></h2>
+  <h1>#BISABANGET</h1>
+  <a class="btn" href="https://wa.me/6281234567890">Konsultasi Sekarang</a>
 </section>
 
 <!-- FOOTER -->
