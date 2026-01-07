@@ -6,6 +6,7 @@
 <title>Satukelas.id | Magang Digital Marketing</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{box-sizing:border-box}
@@ -15,32 +16,32 @@ body{
   background:#f4f6fb;
   color:#1f2937;
 }
-section{
-  padding:90px 20px;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-}
+section{padding:90px 20px}
+.container{max-width:1100px;margin:auto}
 .hero{
   background:linear-gradient(135deg,#4f46e5,#3b82f6);
   color:white;
-  text-align:center;
 }
-.hero h1{
-  font-size:42px;
-  margin-bottom:10px;
-  animation:fadeUp 1s ease;
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
 }
-.hero p{
-  font-size:18px;
-  opacity:.95;
-  animation:fadeUp 1.3s ease;
+.hero h1{font-size:42px;margin-bottom:10px}
+.hero p{font-size:18px;opacity:.95}
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:14px;
+  margin-bottom:15px;
 }
 .btn{
   display:inline-block;
   margin-top:25px;
-  padding:15px 32px;
+  padding:15px 34px;
   background:white;
   color:#4f46e5;
   border-radius:50px;
@@ -48,36 +49,42 @@ section{
   text-decoration:none;
   transition:.3s;
 }
-.btn:hover{
-  transform:translateY(-3px);
+.btn:hover{transform:translateY(-4px)}
+.hero img{
+  width:100%;
+  max-width:420px;
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+  100%{transform:translateY(0)}
 }
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
 .card{
   background:white;
   padding:30px;
-  border-radius:20px;
+  border-radius:22px;
   box-shadow:0 20px 40px rgba(0,0,0,.08);
-  animation:fadeUp 1s ease;
+  text-align:center;
 }
-.card h3{
-  margin-top:0;
+.card i{
+  font-size:32px;
+  color:#4f46e5;
+  margin-bottom:15px;
 }
+.alt{background:#eef2ff}
 .center{text-align:center}
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:translateY(0)}
-}
 .footer{
   background:#111827;
   color:white;
   text-align:center;
   padding:40px 20px;
 }
-a{color:#3b82f6}
 </style>
 </head>
 
@@ -85,10 +92,16 @@ a{color:#3b82f6}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <h1>Magang Mandiri Digital Marketing</h1>
-    <p>Tingkatkan skill dan pengalaman kerja digital marketing secara online (WFH)</p>
-    <a class="btn" href="https://www.satukelas.id/learning-path/16">Daftar Sekarang</a>
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">🔥 100% Online • Bersertifikat BNSP</div>
+      <h1>Magang Mandiri Digital Marketing</h1>
+      <p>Tingkatkan skill dan pengalaman kerja digital marketing secara online (WFH)</p>
+      <a class="btn" href="https://www.satukelas.id/learning-path/16">Daftar Sekarang</a>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80">
+    </div>
   </div>
 </section>
 
@@ -96,18 +109,18 @@ a{color:#3b82f6}
 <section>
   <div class="container center">
     <h2>Tentang Satukelas.id</h2>
-    <p>Satukelas.id adalah platform pembelajaran digital yang menyediakan program magang mandiri berbasis praktik untuk mahasiswa dan fresh graduate agar siap bersaing di dunia kerja digital.</p>
+    <p>Platform pembelajaran digital yang menyediakan program magang mandiri berbasis praktik untuk mahasiswa dan fresh graduate.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
-<section>
+<section class="alt">
   <div class="container">
     <div class="cards">
-      <div class="card"><h3>100+ Video Interaktif</h3><p>Pembelajaran visual dan mudah dipahami.</p></div>
-      <div class="card"><h3>Self Learning</h3><p>Belajar fleksibel kapan saja dan di mana saja.</p></div>
-      <div class="card"><h3>Magang Mandiri</h3><p>Pengalaman kerja digital berbasis proyek.</p></div>
-      <div class="card"><h3>Sertifikasi BNSP</h3><p>Sertifikat kredibel untuk dunia kerja.</p></div>
+      <div class="card"><i class="fa-solid fa-video"></i><h3>100+ Video</h3><p>Pembelajaran interaktif</p></div>
+      <div class="card"><i class="fa-solid fa-clock"></i><h3>Self Learning</h3><p>Belajar fleksibel</p></div>
+      <div class="card"><i class="fa-solid fa-briefcase"></i><h3>Magang Mandiri</h3><p>Real project</p></div>
+      <div class="card"><i class="fa-solid fa-certificate"></i><h3>Sertifikasi</h3><p>BNSP kredibel</p></div>
     </div>
   </div>
 </section>
@@ -117,17 +130,16 @@ a{color:#3b82f6}
   <div class="container center">
     <h2>LULUS LANGSUNG JADI DIGITAL MARKETER?</h2>
     <h3 style="color:#4f46e5">#BISABANGET</h3>
-    <p>Program Magang Mandiri Digital Marketing bersertifikat BNSP dari Satukelas.id.</p>
+    <p>Program Magang Mandiri Digital Marketing bersertifikat BNSP.</p>
   </div>
 </section>
 
 <!-- CTA -->
-<section>
+<section class="alt">
   <div class="container center">
     <a class="btn" href="https://wa.me/6281234567890">Konsultasi via WhatsApp</a>
     <p style="margin-top:20px">
-      <a href="https://instagram.com/satukelas.id">Instagram</a> |
-      <a href="https://facebook.com/satukelas.id">Facebook</a>
+      Instagram • Facebook • Satukelas.id
     </p>
   </div>
 </section>
